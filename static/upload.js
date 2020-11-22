@@ -8,7 +8,7 @@ function setStatus(){
         for (let index = 0; index < count; index++) {
             text=text+".";
         }
-        $('#status').html(text);
+        $('#upload_status').html(text);
         if(count==5) count=0;
         count++;
     }, 300);
@@ -39,10 +39,10 @@ function upload(){
                 if (e.lengthComputable) {
                 var percent = Math.floor(e.loaded/e.total*100);
                 if(percent <= 100) {
-                    $("#status").html('upload: '+percent+'%');
+                    $("#upload_status").html('upload: '+percent+'%');
                 }
                 if(percent >= 100) {
-                    $("#status").html('success');
+                    $("#upload_status").html('success');
                 }
                 }
             }, false);
@@ -51,7 +51,7 @@ function upload(){
         },
         complete:function(data,status){
             //clearInterval(t);
-            $('#status').html(status);
+            $('#upload_status').html(status);
             if(status=="success"){
                 var url=data.responseText;
                 var content=$('#content').val();

@@ -1,0 +1,355 @@
+/* @font-face {
+    font-family: 'monaco';
+    src: url('monaco.ttf');
+  } */
+  
+  body {
+      color: #a5a5ff;
+      font-weight: 200;
+      background-color: #4242e7;
+      font-family: monaco, Bitstream Vera Sans Mono, Courier New, monospace;
+      display: inline-block;
+      padding: 12px 12px 12px 12px;
+      font-size: 18px;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: right;
+      border: 2px dashed #b5b5b5;
+      background-color: rgba(0, 0, 0, 0.90);
+      line-height: initial;
+      display: table-cell;
+  }
+  
+  form {
+      margin: initial;
+  }
+  
+  html {
+      background-color: #000;
+      height: 95%;
+      width: 95%;
+      background-image: url("pattern.png");
+      background-repeat: repeat;
+      display: table;
+      margin: auto;
+      padding: 24px 0px 24px 0px;
+  }
+  
+  th {
+      font-weight: bold;
+      color: #ffffff;
+  }
+  
+  a {
+      color: #00dd51;
+      text-decoration: underline;
+      font-weight: normal;
+      white-space: nowrap;
+  }
+  
+  a:visited {
+      color: #00dd51;
+  }
+  
+  a:hover {
+      color: #ffff76;
+      background-color: initial;
+      text-shadow: 0px 0px 1px yellow;
+  }
+  
+  a:active {
+      color: #00dd51;
+  }
+  
+  .header {
+      color: #ffff46;
+      font-weight: bold;
+  }
+  
+  .blinking-cursor {
+      font-weight: normal;
+      font-size: inherit;
+      color: #b5b5b5;
+      -webkit-animation: 2s blink step-end infinite;
+      -moz-animation: 2s blink step-end infinite;
+      -ms-animation: 2s blink step-end infinite;
+      -o-animation: 2s blink step-end infinite;
+      animation: 2s blink step-end infinite;
+  }
+  
+  @keyframes "blink" {
+      from, to {
+          color: transparent;
+      }
+      50% {
+          color: #ffff76;
+      }
+  }
+  
+  @-moz-keyframes blink {
+      from, to {
+          color: transparent;
+      }
+      50% {
+          color: #ffff76;
+      }
+  }
+  
+  @-webkit-keyframes "blink" {
+      from, to {
+          color: transparent;
+      }
+      50% {
+          color: #ffff76;
+      }
+  }
+  
+  @-ms-keyframes "blink" {
+      from, to {
+          color: transparent;
+      }
+      50% {
+          color: #ffff76;
+      }
+  }
+  
+  @-o-keyframes "blink" {
+      from, to {
+          color: transparent;
+      }
+      50% {
+          color: #ffff76;
+      }
+  }
+  
+  input {
+      color: white;
+      background-color: transparent;
+      font-family: inherit;
+      font-size: inherit;
+      caret-color: #ffff76;
+  }
+  
+  input[type="text"], input[type="password"], input[type="occupation"], input[type="email"] {
+      color: white;
+      border: none;
+      background-color: transparent;
+      margin: 0px 0px;
+      padding: 0px 0px 0px 4px;
+  }
+  
+  table {
+      border-spacing: 0px;
+      border-collapse: separate;
+      left: 190px;
+      position: absolute;
+      float:left;
+      top: 35px;
+  }
+  
+  #scoreboard table, #scoreboard th, #scoreboard td, #challenges table, #challenges th, #challenges td {
+  /*     font-weight: normal; */
+      border-left: 2px dashed #b5b5b5;
+      border-bottom: 2px dashed #b5b5b5;
+      padding-left: 1ch;
+      padding-right: 1ch;
+  }
+  
+  #scoreboard th, #challenges th {
+      cursor: pointer;
+  }
+  
+  #scoreboard, #challenges {
+      border-right: 2px dashed #b5b5b5;
+      border-top: 2px dashed #b5b5b5;    
+  }
+  
+  #user_score td {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+  }
+  
+  #challenges td, #challenges th {
+      padding-left: 1ch;
+      padding-right: 1ch;
+  }
+  
+  #challenges th:last-child, #challenges td:last-child, #challenges th:nth-last-child(2), #challenges td:nth-last-child(2), #scoreboard th:nth-last-child(2), #scoreboard td:nth-last-child(2), #scoreboard th:first-child, #scoreboard td:first-child {
+      text-align: right;
+  }
+  
+  #challenges th:first-child, #challenges td:first-child, #challenges th:nth-last-child(4), #challenges td:nth-last-child(4), #scoreboard th:nth-last-child(4), #scoreboard td:nth-last-child(4) {
+      text-align: left;
+  }
+  
+  #challenges th:nth-last-child(3), #challenges td:nth-last-child(3), #challenges th:nth-last-child(5), #challenges td:nth-last-child(5), #scoreboard th:nth-last-child(3), #scoreboard td:nth-last-child(3), #scoreboard th:last-child, #scoreboard td:last-child {
+      text-align: center;
+  }
+  
+  #challenges td:nth-child(2) {
+      color: #019cf9;
+  }
+  
+  #challenges td:nth-child(3) {
+      color: #ff3377;
+  }
+  
+  #challenges td:nth-child(4) {
+      color: #b366ff;
+  /*     font-weight: bold; */
+  }
+  
+  #challenges td:nth-child(5) {
+      color: #ffb31a;
+  /*     font-weight: bold; */
+  }
+  
+  #scoreboard td:first-child {
+      color: white;
+  }
+  
+  .wrong {
+      color: red;
+      border: 2px dashed #ff0000;
+      padding-left: 1ch;
+      padding-right: 1ch;
+      font-weight: bold;
+  }
+  
+  .congrats {
+      border: 2px dashed #ffff76;
+      padding-left: 1ch;
+      padding-right: 1ch;
+      font-weight: bold;
+  }
+  
+  .warn {
+      color: #ffa500;
+      border: 2px dashed #ffa500;
+      padding-left: 1ch;
+      padding-right: 1ch;
+      font-weight: bold;
+  }
+  
+  .enter {
+      white-space: nowrap;
+      color: white;
+  }
+  
+  .solved, .solved > td, .solved > td > a, #challenges .solved > td:nth-child(n) {
+      color: #b5b5b5;
+      text-decoration: line-through;
+  }
+  
+  .solved > td > a:hover {
+      text-shadow: initial;
+  }
+  
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color:    #a5a5ff;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color:    #a5a5ff;
+     opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color:    #a5a5ff;
+     opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color:    #a5a5ff;
+  }
+  
+  .white {
+      color: white;
+  }
+  
+  #status {
+      float:left;
+      top: 37px;
+      left: 70px;
+      position: absolute;
+      /* font-size: smaller */
+  }
+  
+  @media (max-width: 800px) {
+      #status {
+          display: none;
+      }
+  }
+  
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: gray;
+      opacity: 0.5; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: gray;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+      color: gray;
+  }
+  
+  .unknown {
+      width: 20px;
+      height: 18px;
+      background-image: url("unknown.svg");
+  }
+  
+  
+  .country {
+      color: white;
+      background-color: transparent;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      width: 100%;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: url(selectbox_arrow.png) right center no-repeat;
+  }
+  
+  .country option {
+      color: black;
+  }
+  
+  :root::-webkit-media-controls-panel,
+  select {
+      text-indent: 3px;
+  }
+  
+  .border-red {
+      border: 1px solid red !important;
+  }
+  
+  .new-mark {
+      color: black;
+      margin-left: 6px;
+      font-size: 10px;
+      background: yellow;
+      border: 1px dashed black;
+      padding-left: 1px;
+      padding-right: 1px;
+  }
+  #content{
+    /* font-size: 18px;
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+    color: #a5a5ff; */
+    font-size: 100%;
+    margin: 0;
+    padding: 20px;
+    overflow-y: auto;
+    resize: none;
+    width: 100%;
+    height: 90%;
+    min-height: 90%;
+    box-sizing: border-box;
+    border: 1px #ddd solid;
+    background-color: transparent;
+    color: #a5a5ff;
+    outline: none;
+  }
