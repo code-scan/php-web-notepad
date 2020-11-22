@@ -1,6 +1,6 @@
 # php web notepad 
 
-[!img](static/demo.jpg)
+![img](static/demo.jpg)
 
 [Demo https://js.al](https://js.al)
 ## 修改自 minimalist-web-notepad
