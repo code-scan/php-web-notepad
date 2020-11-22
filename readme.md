@@ -6,6 +6,10 @@ nginx config
 location / {
     rewrite ^/([a-zA-Z0-9_-]+)$ /index.php?note=$1;
 }
+location ^~/_tmp_js_al_files 
+{ 
+    deny all; 
+} 
 ```
 
 

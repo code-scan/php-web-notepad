@@ -35,7 +35,7 @@ if(isset($_FILES['data']) and !empty($_FILES['data'])){
   $path.="-".$ext;
   echo 'FileName: '.$_FILES['data']['name']."\n";
   move_uploaded_file($_FILES['data']['tmp_name'],$path);
-  echo 'Link: '.$base_url.'/'.$filename;
+  echo 'Link: '.$base_url.'/'.$filename."\n";
   die();
 
 }
